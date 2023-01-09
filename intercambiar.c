@@ -4,17 +4,17 @@
 /*
   Método que intercambia o contido de dous punteiros a int.
 Parámetros de entrada:
- - a: punteiro a int, recibido por REFERENCIA, é dicir, recibimos a dirección do punteiro. Vale, si, un punteiro é unha dirección, pois ben,
-       nosoutros aquí recibimos a DIRECCIÓN do punteiro a int.
- - b: idem.
+ - p1: punteiro a int, recibido por REFERENCIA, é dicir, recibimos a dirección do punteiro. Vale, si, un punteiro é unha dirección, pois ben,
+       nosoutros aquí recibimos a DIRECCIÓN do PUNTEIRO a int.
+ - p2: idem.
 */
-void swap(int **a, int **b)
+void swap(int **p1, int **p2)
 {
   int *tmp = NULL;
-  tmp = *a; //o punteiro "tmp" vai apuntar á misma dirección de memoria que apunta o punteiro "a"
-  *a = *b; //o punteiro "b" vai apuntar á misma dirección de memoria que apunta o punteiro "b"
-  *b = tmp; //o punteiro "b" vai apuntar á misma dirección de memoria que apunta o punteiro "tmp", que apunta
-           //á misma dirección que apuntaba o punteiro "a" antes de machacalo.
+  tmp = *p1; //o punteiro "tmp" vai apuntar á misma dirección de memoria que apunta o punteiro "p1"
+  *p1 = *p2; //o punteiro "p1" vai apuntar á misma dirección de memoria que apunta o punteiro "p2"
+  *p2 = tmp; //o punteiro "p2" vai apuntar á misma dirección de memoria que apunta o punteiro "tmp", que apunta
+           //á misma dirección á que apuntaba o punteiro "p1" antes de machacalo.
 //  printf("dentro: a = %d, b = %d\n", **a, **b);
 }
 
